@@ -36,9 +36,13 @@ public class Main {
         System.out.println("Zip code:");
         int zipCode = scanner.nextInt();
 
+        //do nothing
+        scanner.nextLine();
+
         System.out.println("City:");
         String city = scanner.nextLine();
 
-        
+        user.addressData(street, buildingNumber, apartmentNumber, zipCode, city);
+        user.addressDataPrint();
     }
 }
