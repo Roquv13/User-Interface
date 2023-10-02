@@ -14,9 +14,14 @@ public class Main {
         System.out.println("How old are you?");
         int age = scanner.nextInt();
 
+        //do nothing
+        scanner.nextLine();
+
         System.out.println("Give your email address:");
         String email = scanner.nextLine();
 
         user.basicInfo(name, surname, age, email);
+
+        user.basicDataPrint();
     }
 }
