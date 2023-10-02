@@ -20,8 +20,25 @@ public class Main {
         System.out.println("Give your email address:");
         String email = scanner.nextLine();
 
-        user.basicInfo(name, surname, age, email);
-
+        user.basicData(name, surname, age, email);
         user.basicDataPrint();
+
+        System.out.println("Enter your address.");
+        System.out.println("Street:");
+        String street = scanner.nextLine();
+
+        System.out.println("Building number:");
+        int buildingNumber = scanner.nextInt();
+
+        System.out.println("Apartment number:");
+        int apartmentNumber = scanner.nextInt();
+
+        System.out.println("Zip code:");
+        int zipCode = scanner.nextInt();
+
+        System.out.println("City:");
+        String city = scanner.nextLine();
+
+        
     }
 }
