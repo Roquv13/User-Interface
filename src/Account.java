@@ -22,7 +22,7 @@ public class Account {
     }
 
     public void passwordCheck(String password) {
-        password = this.password;
+        this.password = password;
 
         if (password.length() >= 8) {
             for (int i = 0; i < password.length(); i++) {
@@ -30,6 +30,11 @@ public class Account {
                 if (Character.isUpperCase(passwordChar[i])) uppercaseCount++;
                 if (Character.isDigit(passwordChar[i])) digitCount++;
             }
+            if (uppercaseCount >= 1 && digitCount >= 1) {
+                String correctPassword = password;
+                System.out.println(password);
+            }
         }
+        else System.out.println("Password is incorrect");
     }
 }
