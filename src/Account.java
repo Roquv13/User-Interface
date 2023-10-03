@@ -5,6 +5,8 @@ public class Account {
     // User account
     String login;
     String password;
+    int uppercaseCount;
+    int digitCount;
     public void registerUser() {
         Scanner scanner = new Scanner(System.in);
         HashMap<String, String> userAccount = new HashMap<>();
@@ -17,5 +19,17 @@ public class Account {
         password = scanner.nextLine();
 
         userAccount.put(login, password);
+    }
+
+    public void passwordCheck(String password) {
+        password = this.password;
+
+        if (password.length() >= 8) {
+            for (int i = 0; i < password.length(); i++) {
+                char[] passwordChar = password.toCharArray();
+                if (Character.isUpperCase(passwordChar[i])) uppercaseCount++;
+                if (Character.isDigit(passwordChar[i])) digitCount++;
+            }
+        }
     }
 }
