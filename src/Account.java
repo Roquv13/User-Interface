@@ -7,6 +7,7 @@ public class Account {
     String password;
     int uppercaseCount;
     int digitCount;
+    String incorrectPassword;
     public void registerUser() {
         Scanner scanner = new Scanner(System.in);
         HashMap<String, String> userAccount = new HashMap<>();
@@ -23,6 +24,7 @@ public class Account {
 
     public void passwordCheck(String password) {
         this.password = password;
+        incorrectPassword = "Password is incorrect";
 
         if (password.length() >= 8) {
             for (int i = 0; i < password.length(); i++) {
@@ -33,8 +35,8 @@ public class Account {
             if (uppercaseCount >= 1 && digitCount >= 1) {
                 String correctPassword = password;
                 System.out.println(password);
-            }
+            } else System.out.println(incorrectPassword);
         }
-        else System.out.println("Password is incorrect");
+        else System.out.println(incorrectPassword);
     }
 }

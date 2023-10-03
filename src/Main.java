@@ -46,6 +46,6 @@ public class Main {
 //        user.addressDataPrint();
 
         Account account = new Account();
-        account.passwordCheck("abcd123OP");
+        account.passwordCheck("abcd1234G");
     }
 }
