@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 //        User user = new User();
-//        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 //
 //        System.out.println("What's your name?");
 //        String name = scanner.nextLine();
@@ -46,6 +46,8 @@ public class Main {
 //        user.addressDataPrint();
 
         Account account = new Account();
-        account.passwordCheck("abcd1234G");
+        System.out.println("Set up your password:");
+        String password = scanner.nextLine();
+        account.passwordCheck(password);
     }
 }
