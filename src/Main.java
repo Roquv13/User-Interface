@@ -29,13 +29,13 @@ public class Main {
         String street = scanner.nextLine();
 
         System.out.println("Building number:");
-        int buildingNumber = scanner.nextInt();
+        String buildingNumber = scanner.nextLine();
 
         System.out.println("Apartment number:");
         int apartmentNumber = scanner.nextInt();
 
         System.out.println("Zip code:");
-        int zipCode = scanner.nextInt();
+        String zipCode = scanner.nextLine();
 
         // do nothing
         scanner.nextLine();

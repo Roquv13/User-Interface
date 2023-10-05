@@ -12,9 +12,9 @@ public class User {
 
     // User address
     String street;
-    int buildingNumber;
+    String buildingNumber;
     int apartmentNumber;
-    int zipCode;
+    String zipCode;
     String city;
 
     public void basicData(String name, String surname, int age, String email) {
@@ -24,7 +24,7 @@ public class User {
         this.email = email;
     }
 
-    public void addressData(String street, int buildingNumber, int apartmentNumber, int zipCode, String city) {
+    public void addressData(String street, String buildingNumber, int apartmentNumber, String zipCode, String city) {
         this.street = street;
         this.buildingNumber = buildingNumber;
         this.apartmentNumber = apartmentNumber;
