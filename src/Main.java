@@ -24,8 +24,6 @@ public class Main {
 
         user.basicData(name, surname, age, email);
 
-
-
         System.out.println("Enter your address.");
         System.out.println("Street:");
         String street = scanner.nextLine();
@@ -47,6 +45,9 @@ public class Main {
 
         // Add data to addressData
         user.addressData(street, buildingNumber, apartmentNumber, zipCode, city);
+
+        // Data print
+        user.dataPrint();
 
         // Setting up password
         Account account = new Account();

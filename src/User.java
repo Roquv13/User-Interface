@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
 
 public class User {
@@ -32,11 +34,33 @@ public class User {
 
     public void basicDataPrint() {
         System.out.println("Name: " + name + "\tSurname: " + surname + "\tAge: " + age);
-        System.out.println("E-Mail: " + email);;
+        System.out.println("E-Mail: " + email);
+        ;
     }
 
     public void addressDataPrint() {
         System.out.println("Address: " + street + "\t" + buildingNumber + "/" + apartmentNumber);
         System.out.println("Zip code: " + zipCode + "\t" + city);
+    }
+
+    public void dataPrint() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Which data do you want to print:");
+        System.out.println("1. Display basic data about user");
+        System.out.println("2. Display address data about user");
+        System.out.println("3. Display both data");
+        System.out.println("4. Exit");
+        System.out.println("Select:");
+        int selection = scanner.nextInt();
+        switch (selection) {
+            case 1 -> basicDataPrint();
+            case 2 -> addressDataPrint();
+            case 3 -> {
+                basicDataPrint();
+                addressDataPrint();
+            }
+            case 4 -> System.out.println("Exit");
+        }
     }
 }
